@@ -1,0 +1,40 @@
+From b4f2b3422ca4a986093ffa4d7c57eba6ca6df61d Mon Sep 17 00:00:00 2001
+From: John Madieu <j.madieu@expemb.com>
+Date: Thu, 24 Dec 2015 14:23:07 +0100
+Subject: [PATCH] activated spi and i2c
+
+Signed-off-by: John Madieu <j.madieu@expemb.com>
+---
+ arch/arm/boot/dts/bcm2709-rpi-2-b.dts | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/arch/arm/boot/dts/bcm2709-rpi-2-b.dts b/arch/arm/boot/dts/bcm2709-rpi-2-b.dts
+index 76d44a2..fb5172c 100644
+--- a/arch/arm/boot/dts/bcm2709-rpi-2-b.dts
++++ b/arch/arm/boot/dts/bcm2709-rpi-2-b.dts
+@@ -45,6 +45,7 @@
+ &spi0 {
+ 	pinctrl-names = "default";
+ 	pinctrl-0 = <&spi0_pins>;
++	status = "okay";
+ 
+ 	spidev@0{
+ 		compatible = "spidev";
+@@ -67,12 +68,14 @@
+ 	pinctrl-names = "default";
+ 	pinctrl-0 = <&i2c0_pins>;
+ 	clock-frequency = <100000>;
++	status = "okay";
+ };
+ 
+ &i2c1 {
+ 	pinctrl-names = "default";
+ 	pinctrl-0 = <&i2c1_pins>;
+ 	clock-frequency = <100000>;
++	status = "okay";
+ };
+ 
+ &i2c2 {
+-- 
+1.9.1
+
