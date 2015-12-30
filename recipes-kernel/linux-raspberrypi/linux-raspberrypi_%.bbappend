@@ -30,5 +30,30 @@ kernel_do_configure_prepend() {
 	# Required for PrivateNetwork and PrivateDevices in service units
 	kernel_configure_variable NET_NS y
 	kernel_configure_variable DEVPTS_MULTIPLE_INSTANCES y
-
+	
+	#ppp	
+	kernel_configure_variable PPP y
+	kernel_configure_variable PPP_BSDCOMP y
+	kernel_configure_variable PPP_DEFLATE y
+	kernel_configure_variable PPP_ASYNC y
+	kernel_configure_variable PPP_SYNC_TTY y
+	kernel_configure_variable PPP_MULTILINK y
+    kernel_configure_variable PPP_MPPE m
+    kernel_configure_variable PPPOE m
+    kernel_configure_variable PPP_DEFLATE m
+    
+    # Masquerade support
+    kernel_configure_variable NETFILTER_XTABLES m
+    kernel_configure_variable NF_CONNTRACK m
+    kernel_configure_variable NF_CONNTRACK_IPV4 m
+    kernel_configure_variable NF_NAT_IPV4 m
+    kernel_configure_variable IP_NF_TARGET_MASQUERADE m
+    kernel_configure_variable IP_NF_IPTABLES m
+    kernel_configure_variable IP_NF_FILTER m
+    kernel_configure_variable IP_NF_TARGET_REJECT m
+    kernel_configure_variable NETFILTER_XTABLES m
+    kernel_configure_variable IP_NF_ARPTABLES m
+    kernel_configure_variable IP_NF_ARPFILTER m
+    kernel_configure_variable IP_NF_ARP_MANGLE m
+ 
 }
