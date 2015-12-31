@@ -1,5 +1,5 @@
  
-PACKAGECONFIG = "gles2 release dbus udev evdev widgets tools libs openssl  jpeg libpng zlib pulseaudio"
+PACKAGECONFIG = "evdev freetype tslib gles2 release dbus udev evdev widgets libs openssl jpeg libpng zlib pulseaudio fontconfig"
 
 #QT_CONFIG_FLAGS_append = " -v -no-reduce-relocations  -no-opengl  -device linux-rasp-pi2-g++  -device-option CROSS_COMPILE=${HOST_PREFIX} "
 
@@ -32,7 +32,7 @@ load(qt_config)
 EOF
 }
 
-
+PACKAGECONFIG_remove = "examples"
 
 
 
