@@ -12,6 +12,8 @@ inherit autotools pkgconfig
 RCONFLICTS_libav = "libav"
 RREPLACES_libav = "libav"
 
+PROVIDES = "ffmpeg"
+
 S = "${WORKDIR}/FFmpeg-2.6.4-Isengard"
 
 EXTRA_FFCONF_armv7a = "--cpu=cortex-a8"
