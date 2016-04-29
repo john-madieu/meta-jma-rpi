@@ -19,7 +19,6 @@ DEPENDS = "jpeg"
 RDEPENDS_${PN} = "v4l-utils"
 
 do_install () {
-    echo "WORKDIR = ${WORKDIR}"
     echo "SOURCEDIR = ${S}"
     install -d ${D}${libdir}/
     install -d ${D}${bindir}/
