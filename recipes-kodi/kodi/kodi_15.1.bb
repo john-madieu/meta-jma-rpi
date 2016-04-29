@@ -33,10 +33,11 @@ DEPENDS = " \
 	python-pycairo \
 	python-mako \
 	boost \
-	ffmpeg \
+	ffmpeg-kodi \
 	libass \
 	mpeg2dec \
 	libvorbis \
+	giflib \
 	curl \
 	libgpg-error \
 	tiff \
@@ -54,7 +55,7 @@ DEPENDS = " \
 	libtheora \
 	bluez4 \
 	fdk-aac \
-	libiconv \
+	virtual/libiconv \
 	swig-native \
 	libsquish \
 	jsonschemabuilder-native \
@@ -62,6 +63,9 @@ DEPENDS = " \
 	libmicrohttpd \
 "
 # glew
+#libiconv
+
+RDEPENDS_${PN} = "glibc-gconv-ibm850 glibc-gconv-utf-32 glibc-gconv-cp1252"
 
 CXXFLAGS += " \
     -I${STAGING_KERNEL_DIR}/include/uapi \
@@ -97,6 +101,7 @@ EXTRA_OECONF="--with-platform=raspberry-pi \
        --enable-alsa --disable-solarwinds --disable-euphoria \
        --disable-plasma --disable-mysql --disable-ssh --disable-samba \
        --enable-udev --enable-optimizations --enable-libusb  \
+       --disable-texturepacker  --enable-gles \
        LIBS='-lvcos -lvchostif -liconv' \
 "
 
