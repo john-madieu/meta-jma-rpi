@@ -1,0 +1,16 @@
+[ethernet]
+mac-address-blacklist=
+
+[connection]
+id=Ethernet
+uuid=ba009f69-6d22-4e10-a70e-8299a6d84651
+type=ethernet
+permissions=
+secondaries=
+
+[ipv4]
+method=auto
+
+[ipv6]
+method=auto
+route-metric=200
