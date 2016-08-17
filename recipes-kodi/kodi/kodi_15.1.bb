@@ -55,7 +55,6 @@ DEPENDS = " \
 	libtheora \
 	bluez4 \
 	fdk-aac \
-	virtual/libiconv \
 	swig-native \
 	libsquish \
 	jsonschemabuilder-native \
@@ -102,7 +101,7 @@ EXTRA_OECONF="--with-platform=raspberry-pi \
        --disable-plasma --disable-mysql --disable-ssh --disable-samba \
        --enable-udev --enable-optimizations --enable-libusb  \
        --disable-texturepacker  --enable-gles \
-       LIBS='-lvcos -lvchostif -liconv' \
+       LIBS='-lvcos -lvchostif' \
 "
 
 do_configure() {
