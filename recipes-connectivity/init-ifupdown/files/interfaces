@@ -1,0 +1,7 @@
+auto lo wlan0
+iface lo inet loopback
+#access point
+iface wlan0 inet static
+address 192.168.21.254
+netmask 255.255.255.0
+broadcast 192.168.21.255
