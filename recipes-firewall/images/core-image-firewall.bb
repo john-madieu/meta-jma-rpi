@@ -3,9 +3,9 @@ LICENSE = "MIT"
 
 inherit core-image distro_features_check
 
-DISTRO_FEATURES_remove = "wayland x11 opengl irda nfc pci cramfs acpi ext2 \
+DISTRO_FEATURES_remove := "wayland x11 opengl irda nfc pci cramfs acpi ext2 \
 						 ipv6 3g pcmcia ptest ppp nfs bluetooth alsa phone"
-DISTRO_FEATURES_append = " kdebug systemd iptable"
+DISTRO_FEATURES_append := " kdebug systemd iptable"
 
 PYTHON = " \
 	python-core python-io python-ctypes python-datetime \
