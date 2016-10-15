@@ -1,6 +1,6 @@
 # meta-jma-rpi - Free wifi hotspot
 
-##Description
+## Description
 
 This layer gives you the possibility to build your own yocto based Hostpot/wifi router.
 The layer has been tested on rpi and udoo quad. the main image is `core-image-firewall`
@@ -8,8 +8,8 @@ The layer has been tested on rpi and udoo quad. the main image is `core-image-fi
 
 ##Changes
 
-v0.1
-~~~~
+###v0.1
+
 
  * Initial Version
 
