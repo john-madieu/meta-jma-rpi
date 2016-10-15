@@ -1,0 +1,34 @@
+VIDEO_CAMERA = "1"
+GPU_MEM = "128"
+
+#GCCVERSION="4.%"
+#PREFERRED_VERSION_gcc := "4.9"
+MACHINE ??= "raspberrypi2"
+LICENSE_FLAGS_WHITELIST = "commercial"
+
+#systemd support
+VIRTUAL-RUNTIME_init_manager = "systemd"
+DISTRO_FEATURES_append = " systemd"
+DISTRO_FEATURES_BACKFILL_CONSIDERED = "sysvinit"
+VIRTUAL-RUNTIME_initscripts = ""
+#MODULE_TARBALL_DEPLOY = "0"
+
+DISTRO_FEATURES_remove = " bluez5 irda nfc bluetooth"
+#INHERIT += "rm_work"
+
+DISTRO ?= "poky"
+PACKAGE_CLASSES ?= "package_ipk"
+
+EXTRA_IMAGE_FEATURES = "debug-tweaks ssh-server-openssh"
+USER_CLASSES ?= "buildstats image-mklibs image-prelink"
+PATCHRESOLVE = "noop"
+
+BB_DISKMON_DIRS = "\
+    STOPTASKS,${TMPDIR},1G,100K \
+    STOPTASKS,${DL_DIR},1G,100K \
+    STOPTASKS,${SSTATE_DIR},1G,100K \
+    ABORT,${TMPDIR},100M,1K \
+    ABORT,${DL_DIR},100M,1K \
+    ABORT,${SSTATE_DIR},100M,1K"
+
+CONF_VERSION = "1"
