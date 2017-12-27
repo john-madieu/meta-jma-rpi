@@ -6,15 +6,15 @@ This layer gives you the possibility to build your own yocto based Hostpot/wifi 
 The layer has been tested on rpi and udoo quad. the main image is `core-image-firewall`
 
 
-##Changes
+## Changes
 
-###v0.1
+### v0.1
 
 
  * Initial Version
 
 
-##Build the image
+## Build the image
 
 It is necessary to get all of layers below:
 
@@ -52,7 +52,7 @@ Finally, launch compilation from `build`:
 Results will be located in `build/tmp/deploy/images/raspberrypi2`
 
 
-##Deploy and Boot on µSD
+## Deploy and Boot on µSD
 
 At this step, you can flash resulting image in your µSD boot device.
 From your `build` directory,
@@ -61,7 +61,7 @@ From your `build` directory,
 
 That is all. Unplug your µSD from your computer to your pi, and then power on.
 
-##TODO
+## TODO
 
  * Add a captive portal
  * Add iptable NAT rules
